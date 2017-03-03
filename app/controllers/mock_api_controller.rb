@@ -1,7 +1,7 @@
 class MockApiController < ApplicationController
    
   def index
-    @users = {'name' => 'Yamada', 'old' => 28}
-    render json: @users
+    @json = File.read('mock_api.json')
+    render json: @json
   end
 end
